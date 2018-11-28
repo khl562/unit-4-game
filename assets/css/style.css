@@ -1,0 +1,82 @@
+#header {
+    position: relative;
+    background-color: orange;
+    color: white;
+    float: left;
+    clear: auto;
+    margin: 20px;
+    padding: 20px;
+}
+
+#buttons {
+    position: relative;
+    float: left;
+    clear: left;
+}
+
+#instructions {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 400px;
+    background-color: tan;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* #section {
+    position: relative;
+    clear: right;
+    float: left;
+} */
+
+#game-num {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    font-size: 75px;
+    background-color: green;
+    color: purple;
+    float: left;
+    clear: left;
+    margin: 20px;
+    padding: 20px;
+}
+
+#score {
+    position: relative;
+    width: 130px;
+    height: 150px;
+    background-color: turquoise;
+    color: black;
+    float: left;
+    margin: 20px;
+    padding: 20px;
+}
+
+#buttons {
+    position: relative;
+    float: left;
+    clear: left;
+    margin: 20px;
+    padding: 20px;
+    border: black solid 10px;
+    width: 280px;
+
+}
+
+#total-header {
+    background-color: green;
+    color: white;
+    position: relative;
+    float: left;
+    clear: left;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+}
+
+
+
