@@ -14,14 +14,22 @@ $(document).ready(function() {
     $('#losses').text(losses)
     $('#user-score').text(totalScore)
     
-    // function generateRandomNumbers() {
-    //     return Math.floor(Math.random() * (12) + 1)
-    // }
+    function generateRandomNumbers() {
+        return Math.floor(Math.random() * (12) + 1)
+    }
 
-    var button1 = Math.floor(Math.random() * (12) + 1)
-    var button2 = Math.floor(Math.random() * (12) + 1)
-    var button3 = Math.floor(Math.random() * (12) + 1)
-    var button4 = Math.floor(Math.random() * (12) + 1)
+    
+    var button1 = generateRandomNumbers()
+    var button2 = generateRandomNumbers()
+    var button3 = generateRandomNumbers()
+    var button4 = generateRandomNumbers()
+
+    function newNumber () {
+        button1 = generateRandomNumbers()
+        button2 = generateRandomNumbers()
+        button3 = generateRandomNumbers()
+        button4 = generateRandomNumbers()
+    }
     
     // var buttons =['btn1', 'btn2', 'btn3', 'btn4']
 
@@ -31,7 +39,7 @@ $(document).ready(function() {
     // console.log(buttons)
 
     $('#button1').on('click', function() {
-    totalScore += but1
+    totalScore += button1
     $('#user-score').text(totalScore);
     checkScore();
     })
@@ -68,11 +76,31 @@ $(document).ready(function() {
     
     function checkScore() {
     if (totalScore > gameNumber) {
-    var total = losses++;
-    $('#losses').text(total);
-    console.log("total score is greater than game number");
-    } else {
-    console.log("total score is less than game number");
+        losses++;
+        $('#losses').text(losses);
+        gameNumber = gameNum(19,120);
+        $('#game-num').text(gameNumber);
+        totalScore = 0;
+        $('#user-score').text(totalScore);
+        newNumber();
+        button1 = generateRandomNumbers();
+        button2 = generateRandomNumbers();
+        button3 = generateRandomNumbers();
+        button4 = generateRandomNumbers();
+        console.log("total score is greater than game number");
+    } else if (totalScore == gameNumber) {
+        wins++;
+        $('#wins').text(wins);
+        gameNumber = gameNum(19,120);
+        $('#game-num').text(gameNumber);
+        totalScore = 0;
+        $('#user-score').text(totalScore);
+        newNumber();
+        button1 = generateRandomNumbers();
+        button2 = generateRandomNumbers();
+        button3 = generateRandomNumbers();
+        button4 = generateRandomNumbers();
+        console.log("total score is less than game number");
     }
     }
     
